@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/agents_navigation"
+    app:startDestination="@id/agentsFragment">
+
+    <fragment
+        android:id="@+id/agentsFragment"
+        android:name="com.example.myexpertnews.ui.agents.AgentsFragment"
+        android:label="fragment_agents"
+        tools:layout="@layout/fragment_agents" >
+        <action
+            android:id="@+id/action_agentsFragment_to_detailAgentFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/detailAgentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailAgentFragment"
+        android:name="com.example.myexpertnews.ui.agents.DetailAgentFragment"
+        android:label="fragment_detail_agent"
+        tools:layout="@layout/fragment_detail_agent" >
+        <argument
+            android:name="agentId"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteAgentsFragment"
+        android:name="com.example.myexpertnews.ui.agents.FavoriteAgentsFragment"
+        android:label="fragment_favorite_agents"
+        tools:layout="@layout/fragment_favorite_agents" >
+        <action
+            android:id="@+id/action_favoriteAgentsFragment_to_detailAgentFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/detailAgentFragment" />
+    </fragment>
+</navigation>

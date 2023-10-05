@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ValorantAgent</string>
+    <string name="title_weapons">Module Title</string>
+    <string name="agent_avatar">Agent Avatar</string>
+    <string name="add_agent_to_favorite">Add agent to favorite</string>
+    <string name="agents">Agents</string>
+    <string name="favorite">Favorite</string>
+    <string name="no_agent_found">No Agent Found</string>
+    <string name="no_information_found">No Information Found</string>
+    <string name="agent_name">Agent Name :</string>
+    <string name="type">Type :</string>
+    <string name="description">Description :</string>
+    <string name="weapon_menu">Weapon Menu</string>
+</resources>

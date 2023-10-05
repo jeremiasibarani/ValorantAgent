@@ -1,0 +1,4 @@
+<resources>
+    <string name="weapon_image">Weapon image</string>
+    <string name="no_weapon_found">No Weapon Found</string>
+</resources>
