@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("androidx.navigation.safeargs.kotlin")
     id("kotlin-kapt")
 }
 
@@ -72,7 +71,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
     // Fragment Navigation
-    val navVersion = "2.7.4"
+    val navVersion = "2.7.0"
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 
