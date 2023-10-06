@@ -42,7 +42,8 @@ class FavoriteAgentsFragment : Fragment() {
             binding.tvNoAgentFound.visibility = View.GONE
             binding.rvAgents.visibility = View.VISIBLE
             val adapter = AgentsAdapter(agents){agentId ->
-
+//                val action = FavoriteAgentsFragmentDirections.actionFavoriteAgentsFragmentToDetailAgentFragment(agentId)
+//                binding.root.findNavController().navigate(action)
             }
             binding.rvAgents.layoutManager = GridLayoutManager(requireActivity(), 2)
             binding.rvAgents.adapter = adapter

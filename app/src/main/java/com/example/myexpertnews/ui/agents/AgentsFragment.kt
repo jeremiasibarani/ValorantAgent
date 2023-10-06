@@ -45,7 +45,8 @@ class AgentsFragment : Fragment() {
                             displayViewsMatchingState(isLoading = false, isError = false)
                             binding.rvAgents.layoutManager = GridLayoutManager(requireActivity(), 2)
                             binding.rvAgents.adapter = AgentsAdapter(result.data){id ->
-
+//                                val action = AgentsFragmentDirections.actionAgentsFragmentToDetailAgentFragment(id)
+//                                binding.root.findNavController().navigate(action)
                             }
                         }
                     }
