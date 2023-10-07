@@ -5,3 +5,13 @@ plugins {
     id("com.android.library") version "8.1.1" apply false
     id("com.android.dynamic-feature") version "8.1.1" apply false
 }
+
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        val nav_version = "2.7.4"
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+    }
+}

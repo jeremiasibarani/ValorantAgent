@@ -20,7 +20,7 @@ class DetailAgentFragment : Fragment() {
 
     private lateinit var binding : FragmentDetailAgentBinding
     private val viewModel : DetailAgentViewModel by viewModel()
-    //private val args : DetailAgentFragmentArgs by navArgs()
+    private val args : DetailAgentFragmentArgs by navArgs()
     private var agent : DetailAgent? = null
 
     override fun onCreateView(
@@ -49,26 +49,27 @@ class DetailAgentFragment : Fragment() {
             }
         }
 
-//        val agentId = args.agentId
-//        if(agentId.isNotEmpty()){
-//            viewModel.setAgentId(agentId)
-//            viewModel.checkFavoriteAgent(agentId).observe(viewLifecycleOwner){ existStatus ->
-//                if(existStatus == 1){
-//                    binding.fabAddFavorite.setImageResource(R.drawable.baseline_favorite_24)
-//                }else{
-//                    binding.fabAddFavorite.setImageResource(R.drawable.baseline_favorite_border_24)
-//                }
-//                binding.fabAddFavorite.setOnClickListener{
-//                    if(existStatus == 1){
-//                        // Hapus dari database
-//                        viewModel.removeFavoriteAgent(agent!!)
-//                    }else{
-//                        // Tambah ke dalam database
-//                        viewModel.addFavoriteAgent(agent!!)
-//                    }
-//                }
-//            }
-//        }
+
+        val agentId = args.agentId
+        if(agentId.isNotEmpty()){
+            viewModel.setAgentId(agentId)
+            viewModel.checkFavoriteAgent(agentId).observe(viewLifecycleOwner){ existStatus ->
+                if(existStatus == 1){
+                    binding.fabAddFavorite.setImageResource(R.drawable.baseline_favorite_24)
+                }else{
+                    binding.fabAddFavorite.setImageResource(R.drawable.baseline_favorite_border_24)
+                }
+                binding.fabAddFavorite.setOnClickListener{
+                    if(existStatus == 1){
+                        // Hapus dari database
+                        viewModel.removeFavoriteAgent(agent!!)
+                    }else{
+                        // Tambah ke dalam database
+                        viewModel.addFavoriteAgent(agent!!)
+                    }
+                }
+            }
+        }
 
         return binding.root
     }

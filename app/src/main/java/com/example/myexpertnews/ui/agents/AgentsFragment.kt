@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.core.data.source.remote.NetworkResult
+import com.example.myexpertnews.R
 import com.example.myexpertnews.databinding.FragmentAgentsBinding
 import kotlinx.coroutines.launch
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -45,8 +46,8 @@ class AgentsFragment : Fragment() {
                             displayViewsMatchingState(isLoading = false, isError = false)
                             binding.rvAgents.layoutManager = GridLayoutManager(requireActivity(), 2)
                             binding.rvAgents.adapter = AgentsAdapter(result.data){id ->
-//                                val action = AgentsFragmentDirections.actionAgentsFragmentToDetailAgentFragment(id)
-//                                binding.root.findNavController().navigate(action)
+                                val action = AgentsFragmentDirections.actionAgentsFragmentToDetailAgentFragment(id)
+                                binding.root.findNavController().navigate(action)
                             }
                         }
                     }
